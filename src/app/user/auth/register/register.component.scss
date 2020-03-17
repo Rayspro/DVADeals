@@ -1,0 +1,88 @@
+.login-wrapper{
+    display: flex;
+    width: 35vw;
+    flex: 1;
+    .login-box{
+        width:90%;
+        height:60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        animation: 500ms ease-out 0s 1 entry;
+        
+        .login-text{
+            font-size:40px;
+            font-weight: 700;
+            margin:0px 10px 20px 15px;
+            .line{
+                width: 100px;
+                height: 5px;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+                background-color: crimson;
+                background-image: linear-gradient(to right, #009E7F , #01559A);
+            }
+        }
+         .forget{
+             text-align: end;
+             width: 90%;
+             cursor: pointer;
+             margin:20px 10px 20px 10px;
+             padding-right: 5px;
+             font-weight: 500;
+             &:hover{
+                 text-decoration: underline;
+             }
+         }    
+        .form-control{
+            width: 90%;
+            height: 45px;
+            border-radius: 10px;
+            margin:20px 10px 20px 10px;
+            border-width: 1px;
+           
+        }
+        .button{
+            background-color: cornflowerblue;
+            height: 50px;
+            width: 90%;
+            color: #ffffff;
+            display: flex;
+            background-image: linear-gradient(to right, #009E7F , #01559A);
+            font-weight: 600;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin:40px 10px 20px 10px;
+        }
+    }
+
+@keyframes entry{
+  0%{
+    transform: translateX(200%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse{
+    0%{
+        border-bottom-color: red;
+    }
+    25%{
+        border-left-color: red;
+    }
+    50%{
+        border-top-color: red;
+    }
+    75%{
+        border-right-color: red;;
+    }
+    100%{
+       
+    }
+}
+}
+ 

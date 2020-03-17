@@ -1,0 +1,75 @@
+.pan{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.left-pan{
+    width: 50vw;
+    min-height: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: rgb(33, 172, 172);
+    display: flex;
+    align-items: center;
+    background:linear-gradient(to right, rgba(100, 145, 194,0.7), rgba(126, 78, 204,0.9)),url("../../../assets/bussiness.jpg");
+
+    .circle{
+        width: 70%;
+        height: 70%;
+        background-color:#ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .circle-text{
+            font-size: 15px;
+            width: 90%;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
+
+.right-pan{
+    width: 50%;
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .router{
+        width: 100%;
+        flex: 1;
+    }
+}
+
+@keyframes entry{
+  0%{
+    transform: translateX(200%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse{
+    0%{
+        border-bottom-color: red;
+    }
+    25%{
+        border-left-color: red;
+    }
+    50%{
+        border-top-color: red;
+    }
+    75%{
+        border-right-color: red;;
+    }
+    100%{
+       
+    }
+}

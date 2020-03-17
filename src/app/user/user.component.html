@@ -1,10 +1,36 @@
-<div class="header-container">
-    <div class="logo">DVA</div>
-    <div class="nav">
-        <div class="nav-container">Home</div>
-        <div class="nav-container">Services</div>
-        <div class="nav-container">Login</div>
-        <div class="nav-container">Register</div>
+<div class="nav">
+    <div class="logo">DAV</div>
+    <div class="nav-bar">
+        <div
+            class="nav-item"
+            [routerLink]="['/home']"
+            routerLinkActive="active"
+        >
+            Home
+        </div>
+        <div
+            class="nav-item"
+            [routerLink]="['/admin']"
+            routerLinkActive="active"
+        >
+            Services
+        </div>
+        <div
+            class="nav-item"
+            [routerLink]="['/auth/login']"
+            routerLinkActive="active"
+        >
+            Login
+        </div>
+        <div
+            class="nav-item"
+            [routerLink]="['/auth/register']"
+            routerLinkActive="active"
+        >
+            Register
+        </div>
     </div>
 </div>
 <router-outlet></router-outlet>
+<!-- #E6C0F2
+#744B9D -->
