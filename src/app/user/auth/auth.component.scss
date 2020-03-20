@@ -32,6 +32,12 @@
             text-align: center;
         }
     }
+
+    @media (max-width:900px) {
+        display: none;
+        width: 100%;
+        background-color: green;
+    }
 }
 
 .right-pan{

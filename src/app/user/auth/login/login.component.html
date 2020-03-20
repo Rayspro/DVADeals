@@ -8,15 +8,31 @@
             <input
                 class="form-control"
                 type="text"
+                name="email"
+                [(ngModel)]="loginData.email"
                 placeholder="Email Or Username"
             >
             <input
                 class="form-control"
                 type="password"
+                name="password"
+                [(ngModel)]="loginData.password"
                 placeholder="Password"
             >
             <div class="forget">Forget Password</div>
-            <div class="button">LOGIN</div>
+            <div
+                *ngIf="!isSubmit"
+                (click)="login()"
+                class="button"
+            >
+                LOGIN
+            </div>
+            <div
+                *ngIf="isSubmit"
+                class="button"
+            >
+                <div class="loader"></div>
+            </div>
         </form>
     </div>
 

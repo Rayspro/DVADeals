@@ -8,15 +8,46 @@
             <input
                 class="form-control"
                 type="text"
-                placeholder="Email Or Username"
+                name="name"
+                [(ngModel)]="registerData.name"
+                placeholder="Name"
+            >
+            <input
+                class="form-control"
+                type="text"
+                name="email"
+                [(ngModel)]="registerData.email"
+                placeholder="Email"
+            >
+            <input
+                class="form-control"
+                type="tel"
+                maxlength="10"
+                [(ngModel)]="registerData.phone_number"
+                name="phone_number"
+                placeholder="Phone Number"
             >
             <input
                 class="form-control"
                 type="password"
+                name="password"
+                [(ngModel)]="registerData.password"
                 placeholder="Password"
             >
+            <input
+                class="form-control"
+                type="password"
+                name="confirm_password2"
+                [(ngModel)]="registerData.confirm_password"
+                placeholder="Confirm Password"
+            >
             <div class="forget">Forget Password</div>
-            <div class="button">LOGIN</div>
+            <div
+                class="button"
+                (click)="register()"
+            >
+                LOGIN
+            </div>
         </form>
     </div>
 

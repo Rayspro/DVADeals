@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user.component';
 import { HomeComponent } from './home/home.component';
 import { from } from 'rxjs';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,6 +19,10 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
     ]
   },
+  {
+    path: 'dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  }
 ];
 
 @NgModule({

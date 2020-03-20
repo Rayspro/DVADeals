@@ -2,6 +2,11 @@
     display: flex;
     width: 35vw;
     flex: 1;
+    
+    @media (max-width:900px) {
+        width: 100%;
+    }
+
     .login-box{
         width:90%;
         height:60%;
@@ -33,19 +38,35 @@
              &:hover{
                  text-decoration: underline;
              }
-         }    
+         }
         .form-control{
             width: 90%;
+            min-width: 300px;
             height: 45px;
             border-radius: 10px;
             margin:20px 10px 20px 10px;
             border-width: 1px;
-           
+        }
+        .button-disable{
+            background-color: grey;
+            height: 50px;
+            width: 90%;
+            min-width: 300px;
+            color: #ffffff;
+            display: flex;
+            font-weight: 600;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 15px;
+            margin:40px 10px 20px 10px;
         }
         .button{
             background-color: cornflowerblue;
             height: 50px;
             width: 90%;
+            min-width: 300px;
             color: #ffffff;
             display: flex;
             background-image: linear-gradient(to right, #009E7F , #01559A);
@@ -53,36 +74,60 @@
             text-align: center;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
             border-radius: 15px;
             margin:40px 10px 20px 10px;
         }
     }
 
-@keyframes entry{
-  0%{
-    transform: translateX(200%);
-  }
-  100%{
-    transform: translateX(0);
-  }
-}
+    .loader{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 0px 2px 0px 0px;
+        border-color: #000;
+        animation: spin 2s linear infinite;
+        -webkit-animation:spin 2s linear infinite;
+        -moz-animation:spin 2s linear infinite;
+        background-color: rgba(0,0,0,0);
+    }
 
-@keyframes pulse{
-    0%{
-        border-bottom-color: red;
+    @keyframes spin{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+
     }
-    25%{
-        border-left-color: red;
+
+    @keyframes entry{
+        0%{
+        transform: translateX(200%);
+        }
+        100%{
+        transform: translateX(0);
+        }
     }
-    50%{
-        border-top-color: red;
+
+    @keyframes pulse{
+        0%{
+            border-bottom-color: red;
+        }
+        25%{
+            border-left-color: red;
+        }
+        50%{
+            border-top-color: red;
+        }
+        75%{
+            border-right-color: red;;
+        }
+        100%{
+            
+        }
     }
-    75%{
-        border-right-color: red;;
-    }
-    100%{
-       
-    }
-}
 }
  
